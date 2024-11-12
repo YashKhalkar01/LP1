@@ -1,0 +1,9 @@
+START 100                  
+LOAD A          
+ADD B          
+STORE RESULT         
+HLT                 
+NUM1 DC 5          
+NUM2 DC 10         
+RESULT DS 1
+END                 

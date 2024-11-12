@@ -1,0 +1,65 @@
+Public Class Form1 
+    Private Sub Label1_Click(sender As Object, e As EventArgs) 
+ 
+    End Sub 
+ 
+    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click 
+ 
+    End Sub 
+ 
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click 
+        TextBox3.Text = SPOSLAB_P1dll.Addition(Val(TextBox1.Text), Val(TextBox2.Text)) 
+    End Sub 
+ 
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click 
+        TextBox3.Text = SPOSLAB_P1dll.Subtraction(Val(TextBox1.Text), Val(TextBox2.Text)) 
+    End Sub 
+ 
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click 
+        TextBox3.Text = SPOSLAB_P1dll.Division(Val(TextBox1.Text), Val(TextBox2.Text)) 
+    End Sub 
+ 
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click 
+        TextBox3.Text = SPOSLAB_P1dll.Multiplication(Val(TextBox1.Text), Val(TextBox2.Text)) 
+    End Sub 
+ 
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click 
+        TextBox3.Text = SPOSLAB_P1dll.modulo(Val(TextBox1.Text), Val(TextBox2.Text)) 
+    End Sub 
+ 
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click 
+        Me.Close() 
+ 
+    End Sub 
+End Class
+
+//DLL FILE
+
+Public Module SPOSLAB_P1dll 
+    Public Function Addition(ByVal Num1 As Integer, ByVal Num2 As Integer) 
+        Dim Sum As String 
+        Sum = Num1 + Num2 
+        Return (Sum) 
+    End Function 
+    Public Function Subtraction(ByVal Num1 As Integer, ByVal Num2 As Integer) 
+        Dim ans As String 
+        ans = Num1 - Num2 
+        Return (ans) 
+    End Function 
+    Public Function Division(ByVal Num1 As Integer, ByVal Num2 As Integer) 
+        Dim ans As String 
+        ans = Num1 / Num2 
+        Return (ans) 
+    End Function 
+    Public Function Multiplication(ByVal Num1 As Integer, ByVal Num2 As Integer) 
+        Dim ans As String 
+        ans = Num1 * Num2 
+        Return (ans) 
+    End Function 
+    Public Function modulo(ByVal Num1 As Integer, ByVal Num2 As Integer) 
+        Dim ans As String 
+        ans = (Num1 Mod Num2) 
+        Return (ans) 
+    End Function 
+ 
+End Module
